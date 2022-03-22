@@ -1,0 +1,22 @@
+@import "../../global.scss";
+
+
+:export {
+	darkPrimary: $darkPrimaryColor;
+	lightPrimary: $lightPrimaryColor;
+	darkSecondary: $darkSecondaryColor;
+	lightSecondary: $lightSecondaryColor;
+
+	lightModeTB_inactive_primary: $lightPrimaryColor;
+	lightModeTB_inactive_secondary: $lightSecondaryColor;
+	lightModeTB_active_primary: $lightSecondaryColor;
+	lightModeTB_active_secondary: $lightPrimaryColor;
+
+	darkModeTB_inactive_primary: $darkPrimaryColor;
+	darkModeTB_inactive_secondary: $darkSecondaryColor;
+	darkModeTB_active_primary: $darkSecondaryColor;
+	darkModeTB_active_secondary: $darkPrimaryColor;
+
+    selectedLightGrad: $selectedLightGrad;
+    selectedDarkGrad: $selectedDarkGrad;
+}

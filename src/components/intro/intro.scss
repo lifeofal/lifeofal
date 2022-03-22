@@ -1,0 +1,70 @@
+@import "../../global.scss";
+
+.intro {
+	background-color: var(--pColor);
+	display: flex;
+	.left {
+		flex: 0.5;
+		overflow: hidden;
+		.imgContainer {
+			//margin-top: 10px;
+			width: 700px;
+			height: 700px;
+			background-image: $selectedLightGrad;
+			border-radius: 50%;
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			float: right;
+
+			img {
+				height: 100%;
+			}
+			overflow: hidden;
+		}
+	}
+	.right {
+		flex: 0.5;
+		position: relative;
+        color: var(--sColor);
+        transition: all 2s ease;
+		.wrapper {
+			width: 100%;
+			height: 100%;
+			padding-left: 50px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			h1 {
+				font-size: 60px;
+				margin: 10px 0;
+			}
+			h2 {
+				font-size: 35px;
+			}
+			h3 {
+				font-size: 30px;
+			}
+		}
+		a {
+			position: absolute;
+			bottom: 10px;
+			.ArrowCircleDown {
+				font-size: 50px;
+				color: var(--sColor);
+				animation: arrowBlink 2s infinite;
+			}
+			@keyframes arrowBlink {
+				0% {
+					opacity: 0.25;
+				}
+				50% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0.25;
+				}
+			}
+		}
+	}
+}
