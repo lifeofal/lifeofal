@@ -1,4 +1,43 @@
-# Getting Started with Create React App
+# hellofriend.
+
+## Project Overview
+
+### What is it?
+
+This is a new version of my portfolio/personal website using the MERN stack (MondoDB, Express, React, Node) with the addition of SCSS for compiling CSS files. I hope to use this site to show off my development skill as well as provide and insight on the teachnologies I have come to learn over the years.
+
+### Tech used
+
+Front End:
+
+For the 'Front End', I decided to learn React.js for its unique way to implement html code and logic in a clean and efficient manner.
+Creating my website to be reactive to change was a sellig point for me as I thought it would be better for a recruiter to go through different stages of the site without reloading.
+
+I also decided to learn and use SASS/SCSS extension preprocessor to keep my CSS clean, fast and dynamic. (Sneak a peak at the darkmode features 👀)
+
+Back End:
+
+(Status: Unimplemented)
+
+For the 'Back End' I will be using Node.js and Express.js in order to maintain a browserless state. I will hook up my site with MondoDB in order to track comments and testimonials that may be submitted. This side of the project is experimental as there isnt too much of a need to have a NoSQL database for a resume site. 
+
+## Project Screen Shot(s)
+
+
+<img src="/git_assets/screen-shot-1.png" width="70%">
+
+<img src="/git_assets/screen-shot-2.png" width="70%">
+
+
+## Updates
+
+### March 22, 2022 🍀
+
+First push to the repo. Version control seemed necissary at this point since my last project file was absolutley demolished with a `npm audit --force`. Thankfully I didnt have too many dependencies missing and I could just re-install them through the cache
+
+--------------------------------------------------
+# REACT readme:
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,32 +78,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
