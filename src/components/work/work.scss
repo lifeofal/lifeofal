@@ -1,3 +1,102 @@
-.work{
-    background-color: salmon;
+@import "../../global.scss";
+
+.work {
+	background-color: salmon;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    position: relative;
+
+    .arrow{
+        font-size: 100px;
+        //height: 50px;
+        position: absolute;
+        color: #fff;
+        &.left{
+            left: 100px;
+        }
+        &.right{
+            right: 100px;
+        }
+    }
+
+	.slider {
+		height: 400px;
+		display: flex;
+		position: absolute;
+		left: 0;
+
+		.container {
+			width: 100vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+            
+			.item {
+				width: 800px;
+				height: 100%;
+				background-color: #fff;
+				border-radius: 20px;
+                display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.left {
+					flex: 4;
+					height: 80%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+                    
+
+                    .leftContainer{
+                        width: 90%;
+                        height: 85%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .imgContainer{
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            background-image: $selectedLightGrad;
+                            display: flex;
+                            align-content: center;
+                            justify-content: center;
+                            align-items: center;
+                            .icon{
+                                font-size: 30px;
+                            }
+                            
+                        }
+                        h2{
+                            font-size: 25px;
+                        }
+                        p{
+                            font-size: 15px;
+                            
+
+                        }
+                        span{
+                            font-size: 18px;
+                            font-weight: 600;
+                            text-decoration: underline;
+                        }
+                    }
+				}
+				.right {
+					flex: 8;
+					height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    img{
+                        width: 400px;
+                        transform: rotate(-10deg);
+                    }
+				}
+			}
+		}
+	}
 }

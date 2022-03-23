@@ -1,0 +1,18 @@
+
+
+@import "../../global.scss";
+
+.portfolioList{
+    font-size: 14px;
+    margin-right: 50px;
+    padding: 7px;
+    border-radius: 10px;
+    transition: all 1s ease;
+    color: var(--pColor);
+    cursor: pointer;
+
+    &.active{
+        background-image: var(--selectedGrad);
+        color: var(--pColor);
+    }
+}

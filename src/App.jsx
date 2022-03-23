@@ -15,10 +15,6 @@ import Menu from "./components/menu/Menu";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./components/themes/Theme";
 
-// const StyledApp = styled.div`
-//   color: ${(props) => props.theme.fontColor};
-// `;
-
 function App() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	//const [displayMode, setDisplayMode] = useState(true); //true light false dark

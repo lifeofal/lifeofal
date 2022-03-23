@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import variables from "./themes.scss";
 
 export const lightTheme = {
-	pColor: variables.lightPriamry,
+	pColor: variables.lightPrimary,
 	sColor: variables.lightSecondary,
 
 	tbPColor_active: variables.lightModeTB_active_primary,
@@ -12,6 +12,7 @@ export const lightTheme = {
 	tbSColor_inactive: variables.lightModeTB_inactive_secondary,
 
     selectedGrad: variables.selectedLightGrad,
+	selectedColor: variables.selectedColorLight,
 	//global: "#051"
 };
 
@@ -26,6 +27,7 @@ export const darkTheme = {
 	tbSColor_inactive: variables.darkModeTB_inactive_secondary,
 
     selectedGrad: variables.selectedDarkGrad,
+	selectedColor: variables.selectedColorDark,
 	//global: "#938"
 };
 
@@ -38,6 +40,7 @@ export const GlobalStyles = createGlobalStyle`
         --tbPColor_inactive: ${(props) => props.theme.tbPColor_inactive};
         --tbSColor_inactive: ${(props) => props.theme.tbSColor_inactive};
         --selectedGrad: ${(props) => props.theme.selectedGrad};
+		--selectedColor: ${(props) => props.theme.selectedColor};
 	}
 `;
 
