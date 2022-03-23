@@ -4,16 +4,16 @@
 
 ### What is it?
 
-This is a new version of my portfolio/personal website using the MERN stack (MondoDB, Express, React, Node) with the addition of SCSS for compiling CSS files. I hope to use this site to show off my development skill as well as provide and insight on the teachnologies I have come to learn over the years.
+This is a new version of my portfolio/personal website using the MERN stack (MondoDB, Express, React, Node) with the addition of SCSS for compiling CSS files. I hope to use this site to show off my development skill as well as provide and insight on the technologies I have come to learn over the years.
 
 ### Tech used
 
 Front End:
 
 For the 'Front End', I decided to learn React.js for its unique way to implement html code and logic in a clean and efficient manner.
-Creating my website to be reactive to change was a sellig point for me as I thought it would be better for a recruiter to go through different stages of the site without reloading.
+Creating my website to be reactive to change was a selling point for me as I thought it would be better for a recruiter to go through different stages of the site without reloading.
 
-I also decided to learn and use SASS/SCSS extension preprocessor to keep my CSS clean, fast and dynamic. (Sneak a peak at the darkmode features 👀)
+I also decided to learn and use SASS/SCSS extension preprocessor to keep my CSS clean, fast and dynamic. (Sneak a peek at the dark mode features 👀)
 
 Back End:
 
@@ -33,7 +33,7 @@ For the 'Back End' I will be using Node.js and Express.js in order to maintain a
 
 ### March 22, 2022 🍀
 
-First push to the repo. Version control seemed necissary at this point since my last project file was absolutley demolished with a `npm audit --force`. Thankfully I didnt have too many dependencies missing and I could just re-install them through the cache
+First push to the repo. Version control seemed necessary at this point since my last project file was absolutely demolished with a `npm audit --force`. Thankfully I didn’t have too many dependencies missing and I could just re-install them through the cache
 
 --------------------------------------------------
 # REACT readme:
@@ -77,4 +77,6 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+
 
