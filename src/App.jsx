@@ -19,7 +19,7 @@ function App() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	//const [displayMode, setDisplayMode] = useState(true); //true light false dark
 
-	const [theme, setTheme] = useState("light");
+	const [theme, setTheme] = useState("dark");
 
 	const themeToggler = () => {
 		console.log(theme);

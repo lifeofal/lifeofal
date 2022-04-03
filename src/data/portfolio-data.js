@@ -37,12 +37,12 @@ export const webPort = [
 {
     id: 1,
     title: "hellofriend",
-    img: "assets/placeHolder.jpg",
+    img: "assets/portfolio-personal-website.png",
 },
 {
     id: 2,
-    title: "Marigo Flowers",
-    img: "assets/placeHolder.jpg",
+    title: "Marigo Flowers Animation",
+    img: "assets/portfolio/marigo.gif",
 },
 {
     id: 3,

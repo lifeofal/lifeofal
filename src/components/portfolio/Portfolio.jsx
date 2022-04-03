@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
+import GitHubCalendar from "react-github-calendar";
 
 import {
 	featuredPort,
@@ -68,13 +69,26 @@ export default function Portfolio() {
 			<div className="container">
 				{data.map((d) => (
 					<div className="item">
-						<img
-							src={d.img}
-							alt="Looks like the path is wonky"
-						/>
+						<img src={d.img} alt="Looks like the path is wonky" />
 						<h3>{d.title}</h3>
 					</div>
 				))}
+			</div>
+
+			<div className="calendar">
+				<GitHubCalendar className ="github-calendar"
+					username="lifeofal"
+					theme={{
+						level0: "var(--level0)",
+						level1: "var(--level1)",
+						level2: "var(--level2)",
+						level3: "var(--level3)",
+						level4: "var(--level4)",
+					}}
+					fontSize={15}
+					hideMonthLabels={true}
+					
+				/>
 			</div>
 		</div>
 	);

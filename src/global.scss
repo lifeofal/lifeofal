@@ -8,3 +8,19 @@ $selectedSecondary: #a4dbff;
 
 $selectedLightGrad: linear-gradient( #fe8d79, #ff5276);
 $selectedDarkGrad: linear-gradient( #a4dbff, #36a5f0);
+
+//github calendar
+// $level0light: #0D1117;
+// $level0dark: #182028;
+// $level1: #48625E;
+// $level2: #006D32;
+// $level3: #26A641;
+// $level4: #39D353;
+
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}) {
+        @content
+    }
+};

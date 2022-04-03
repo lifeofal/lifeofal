@@ -8,11 +8,15 @@
     padding: 7px;
     border-radius: 10px;
     transition: all 1s ease;
-    color: var(--pColor);
+    color: var(--sColor);
     cursor: pointer;
+
+    @include mobile {
+        margin-right: 20px;
+    }
 
     &.active{
         background-image: var(--selectedGrad);
-        color: var(--pColor);
+        color: var(--sColor);
     }
 }

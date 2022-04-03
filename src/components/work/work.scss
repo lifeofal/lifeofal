@@ -1,17 +1,22 @@
 @import "../../global.scss";
 
 .work {
-	background-color: salmon;
+	background-color: var(--pColor);
 	display: flex;
 	align-items: center;
 	justify-content: center;
     position: relative;
+    overflow: hidden;
 
     .arrow{
         font-size: 100px;
         //height: 50px;
         position: absolute;
-        color: #fff;
+        color: var(--sColor);
+
+        @include mobile{
+            display: none;
+        }
         &.left{
             left: 100px;
         }
@@ -25,21 +30,37 @@
 		display: flex;
 		position: absolute;
 		left: 0;
+        transition: all .5s ease-out;
+
+        @include mobile{
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+        }
 
 		.container {
 			width: 100vw;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+            color: var(--sColor);
             
 			.item {
 				width: 800px;
 				height: 100%;
-				background-color: #fff;
+                background-image: var(--selectedGrad);
+				
 				border-radius: 20px;
                 display: flex;
 				align-items: center;
 				justify-content: center;
+
+                @include mobile{
+                    width: 90%;
+                    height: 200px;
+                    margin: 15px 0;
+                    
+                }
 
 				.left {
 					flex: 4;
@@ -59,13 +80,17 @@
                             width: 50px;
                             height: 50px;
                             border-radius: 50%;
-                            background-image: $selectedLightGrad;
+                            background-color: white;
                             display: flex;
                             align-content: center;
                             justify-content: center;
                             align-items: center;
                             .icon{
+                                color: black;
                                 font-size: 30px;
+                            }
+                            @include mobile{
+                                display: none;
                             }
                             
                         }
@@ -74,7 +99,10 @@
                         }
                         p{
                             font-size: 15px;
-                            
+                            @include mobile{
+                                overflow: hidden;
+                                
+                            }
 
                         }
                         span{
@@ -91,9 +119,14 @@
                     align-items: center;
                     justify-content: center;
                     overflow: hidden;
+                    @include mobile{
+                        display: none;
+                    }
                     img{
-                        width: 400px;
-                        transform: rotate(-10deg);
+                        border-radius: 10px;
+                        object-fit: cover;
+                        width: 90%;
+                        //transform: rotate(-10deg);
                     }
 				}
 			}

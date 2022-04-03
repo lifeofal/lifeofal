@@ -3,6 +3,12 @@
 .intro {
 	background-color: var(--pColor);
 	display: flex;
+
+	@include mobile{
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.left {
 		flex: 0.5;
 		overflow: hidden;
@@ -10,15 +16,27 @@
 			//margin-top: 10px;
 			width: 700px;
 			height: 700px;
-			background-image: $selectedLightGrad;
+			transition: all 2s ease-out;
+			background-image: var(--selectedGrad);
 			border-radius: 50%;
 			display: flex;
 			align-items: flex-end;
 			justify-content: center;
 			float: right;
 
+			@include mobile{
+				
+				align-items: flex-start;
+			}
+
 			img {
 				height: 100%;
+
+				@include mobile{
+					height: 75%;
+					padding-left: 35px;
+
+				}
 			}
 			overflow: hidden;
 		}
@@ -35,20 +53,42 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+
+			@include mobile{
+				padding-left: 0;
+				align-items: center;
+				
+			}
 			h1 {
+				@include mobile{
+					font-size: 40px;
+					margin: 40px 0;
+				}
 				font-size: 60px;
 				margin: 10px 0;
 			}
 			h2 {
+				@include mobile{
+					font-size: 30px;
+					font-weight: 300;
+					
+				}
 				font-size: 35px;
 			}
 			h3 {
+				@include mobile{
+					font-size: 25px;
+					font-weight: 200;
+				}
 				font-size: 30px;
 			}
 		}
 		a {
 			position: absolute;
 			bottom: 10px;
+			@include mobile {
+				right: 10px;
+			}
 			.ArrowCircleDown {
 				font-size: 50px;
 				color: var(--sColor);
