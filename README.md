@@ -35,6 +35,10 @@ For the 'Back End' I will be using Node.js and Express.js in order to maintain a
 
 First push to the repo. Version control seemed necessary at this point since my last project file was absolutely demolished with a `npm audit --force`. Thankfully I didn’t have too many dependencies missing and I could just re-install them through the cache
 
+### April 02, 2022 🐰 🥚
+
+Finished the front end of the site. Its fully reactive with mobile support. Some of the color schemes are a bit off with the clashing white and gradient. Also am not a big fan of the work section. Might change up the colors and content.
+
 --------------------------------------------------
 # REACT readme:
 ## Getting Started with Create React App
