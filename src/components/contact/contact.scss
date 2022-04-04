@@ -14,8 +14,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-image: var(--selectedGrad);
+        border-radius: 50%;
         
         img{
+            
             height: 70%;
             @include mobile{
                height: 100%;

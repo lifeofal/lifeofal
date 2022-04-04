@@ -11,6 +11,7 @@
         font-size: 50px;
         @include mobile{
            font-size: 35px;
+           margin-top: 30px;
         }
     }
     .container{
@@ -21,13 +22,16 @@
         justify-content: center;
         @include mobile{
             flex-direction: column;
-            margin-top: 20px;
+            margin: 10px;
+            
+            
         }
 
         .card{
             width: 250px;
             height: 70%;
             border-radius: 10px;
+            background-color: var(--pColor);
             box-shadow: 0px 0px 15px -8px var(--sColor);
             transition: all 1s ease-out;
             display: flex;
@@ -35,9 +39,11 @@
             justify-content: space-around;
             padding: 20px;
             @include mobile{
-                height: 200px;
+                height: 220px;
                 box-shadow: none;
-                border: 1px solid white;
+                border: 1px solid var(--sColor);
+                margin: 20px 0;
+
             }
             
 
@@ -46,9 +52,11 @@
                 height: 75%;
                 margin: 0 30px;
                 @include mobile{
-                    width: 250px;
-                    height: 180px;
-                    margin: 10px 0;
+                    // width: 250px;
+                    // height: 180px;
+                    // margin: 10px 0;
+                    display: none;
+                    
                 }
             }
             &:hover{
@@ -92,7 +100,7 @@
                 padding: 10px;
                 border-radius: 10px;
                 transition: all 1s ease-out;
-                background-color: var(--selectedColor);
+                background-image: var(--selectedGrad);
                 color: var(--sColor);
                 @include mobile{
                     // margin: 10px 0;
@@ -100,14 +108,20 @@
                 }
             }
             .bottom{
+                
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
                 transition: all 1s ease-out;
+                @include mobile{
+                    margin-top: 10px;
+                    height: 80px;
+                    overflow: hidden;
+                }
                 h3{
                     color: var(--sColor);
-                    margin-bottom: 5px;
+                    
                     transition: inherit;
                     @include mobile{
                         overflow: hidden;
@@ -119,10 +133,6 @@
                     @include mobile{
                         overflow: hidden;
                     }
-                }
-                @include mobile{
-                    margin-top: 10px;
-                    overflow: hidden;
                 }
             }
 

@@ -17,10 +17,9 @@ $selectedDarkGrad: linear-gradient( #a4dbff, #36a5f0);
 // $level3: #26A641;
 // $level4: #39D353;
 
-$width: 768px;
 
 @mixin mobile {
-    @media (max-width: #{$width}) {
+    @media (max-width: 768px) {
         @content
     }
 };
