@@ -20,8 +20,8 @@
 		}
 		.imgContainer {
 			//margin-top: 10px;
-			width: 600px;
-			height: 600px;
+			width: 800px;
+			height: 800px;
 			transition: all 2s ease-out;
 			background-image: var(--selectedGrad);
 			border-radius: 50%;
@@ -33,14 +33,16 @@
 
 			@include mobile {
 				align-items: flex-start;
+				width: 600px;
+				height: 600px;
 			}
 
 			img {
-				scale: 1.25;
+				width: 100%;
 
 				@include mobile {
-					padding-left: 50px;
-					scale: 1.2;
+					padding-left: 40px;
+					width: 80%;
 				}
 			}
 			overflow: hidden;
