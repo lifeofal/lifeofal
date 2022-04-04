@@ -3,89 +3,87 @@
 .contact {
 	background-color: var(--pColor);
 	display: flex;
-    @include mobile{
-        flex-direction: column;
-    }
+	@include mobile {
+		flex-direction: column;
+	}
 
 	.left {
 		flex: 1;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-image: var(--selectedGrad);
-        border-radius: 50%;
-        
-        img{
-            
-            height: 70%;
-            @include mobile{
-               height: 100%;
-               padding-top: 20px;
-            }
-        }
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			background-image: var(--selectedGrad);
+			border-radius: 50%;
+			height: 70%;
+			@include mobile {
+				height: 100%;
+				padding-top: 20px;
+			}
+		}
 	}
 	.right {
 		flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 
-        h2{
-            font-size: 30px;
-            color: var(--sColor);
-        }
-        form{
-            width: 60%;
-            height: 60%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            
+		h2 {
+			font-size: 30px;
+			color: var(--sColor);
+		}
+		form {
+			width: 60%;
+			height: 60%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
 
-            input{
-                width: 300px;
-                height: 30px;
-                font-size: 14px;
-                @include mobile{
-                    width: 200px;
-                    height: 20px;
-                }
-            }
-            textarea{
-                width: 300px;
-                height: 200px;
-                font-size: 14px;
-                @include mobile{
-                    width: 200px;
-                    height: 100px;
-                }
-            }
-            button{
-                width: 150px;
-                height: 30px;
-                color: var(--sColor);
-                background-image: var(--selectedGrad);
-                border-radius: 10px;
-                border: none;
-                font-weight: 500;
-                cursor: pointer;
-                @include mobile{
-                    width: 200px;
-                    height: 35px;
-                    font-size: 20px;
-                }
+			input {
+				width: 300px;
+				height: 30px;
+				font-size: 14px;
+				@include mobile {
+					width: 200px;
+					height: 20px;
+				}
+			}
+			textarea {
+				width: 300px;
+				height: 200px;
+				font-size: 14px;
+				@include mobile {
+					width: 200px;
+					height: 100px;
+				}
+			}
+			button {
+				width: 150px;
+				height: 30px;
+				color: var(--sColor);
+				background-image: var(--selectedGrad);
+				border-radius: 10px;
+				border: none;
+				font-weight: 500;
+				cursor: pointer;
+				@include mobile {
+					width: 200px;
+					height: 35px;
+					font-size: 20px;
+				}
 
-                &:focus{
-                    outline: none;
-                }
-            }
-            span{
-                color: var(--selectedColor);
-            }
-        }
+				&:focus {
+					outline: none;
+				}
+			}
+			span {
+				color: var(--selectedColor);
+			}
+		}
 	}
 }
