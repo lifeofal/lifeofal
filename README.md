@@ -39,6 +39,10 @@ First push to the repo. Version control seemed necessary at this point since my 
 
 Finished the front end of the site. Its fully reactive with mobile support. Some of the color schemes are a bit off with the clashing white and gradient. Also am not a big fan of the work section. Might change up the colors and content.
 
+### April 04, 2022 🫠
+
+Mobile vh sizes on FireFox are hot garbage. Every time I try to click on an input element it resizes the entire screen when the keyboard pops in. Spent 15+ hours trying to fix it but seems like this has been an old bug for FF. Giving up for now and just fixing more mobile bugs such as sizing and image loading. 
+
 --------------------------------------------------
 # REACT readme:
 ## Getting Started with Create React App

@@ -16,9 +16,7 @@
 		align-items: center;
 		justify-content: center;
 		@include mobile {
-			
-			align-items:baseline;
-			
+			align-items: baseline;
 		}
 		.imgContainer {
 			//margin-top: 10px;
@@ -64,11 +62,12 @@
 			@include mobile {
 				padding-left: 0;
 				align-items: center;
+				height: 55%;
 			}
 			h1 {
 				@include mobile {
 					font-size: 40px;
-					margin: 40px 0;
+					margin: 10px 0;
 				}
 				font-size: 60px;
 				margin: 10px 0;
@@ -92,7 +91,7 @@
 			position: absolute;
 			bottom: 10px;
 			@include mobile {
-				right: 10px;
+				display: none;
 			}
 			.ArrowCircleDown {
 				font-size: 50px;

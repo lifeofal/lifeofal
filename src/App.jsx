@@ -15,6 +15,9 @@ import Menu from "./components/menu/Menu";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./components/themes/Theme";
 
+
+
+
 function App() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	//const [displayMode, setDisplayMode] = useState(true); //true light false dark
@@ -25,8 +28,10 @@ function App() {
 		console.log(theme);
 		theme === "light" ? setTheme("dark") : setTheme("light");
 	};
+	
 
 	return (
+		
 		<ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
 			<GlobalStyles />
 			{/* <StyledApp> */}
