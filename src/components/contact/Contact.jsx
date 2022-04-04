@@ -18,10 +18,6 @@ export default function Contact() {
 				<form onSubmit={handleSubmit}>
 					<input type="text" placeholder="Email" />
 					<textarea
-						name=""
-						id=""
-						cols="30"
-						rows="10"
 						placeholder="Message"
 					></textarea>
 					<button type="submit">Send</button>

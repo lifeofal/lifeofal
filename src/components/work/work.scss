@@ -8,14 +8,6 @@
     position: relative;
     overflow: hidden;
 
-    @include mobile{
-
-        h1{
-            position: absolute;
-            top: 20px;
-            color: var(--sColor);
-        }
-    }
 
 
     .arrow{
