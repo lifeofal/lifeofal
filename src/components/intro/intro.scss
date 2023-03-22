@@ -1,5 +1,5 @@
 @import "../../global.scss";
-
+@import "https://fonts.googleapis.com/css?family=Khula:700";
 
 .intro {
 	background-color: var(--pColor);
@@ -96,6 +96,24 @@
 					font-weight: 200;
 				}
 				font-size: 30px;
+			}
+
+			.hidden {
+				opacity: 0;
+			}
+			.console-container {
+				font-family: Khula;
+				font-size: 30px;
+				color: white;
+				@include mobile {
+					font-size: 25px;
+					font-weight: 200;
+				}
+			}
+			.console-underscore {
+				top: 8px;
+				display: inline-block;
+				position: relative;
 			}
 		}
 		a {

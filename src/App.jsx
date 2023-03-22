@@ -10,13 +10,12 @@ import {
 } from "./components/componentIndex";
 
 import "./App.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Menu from "./components/menu/Menu";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./components/themes/Theme";
 
-
-
+// import "./components/intro/intro.js";
 
 function App() {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -28,10 +27,12 @@ function App() {
 		console.log(theme);
 		theme === "light" ? setTheme("dark") : setTheme("light");
 	};
-	
+
+	// useEffect(() => {
+	// 	console.log("render in app");
+	// });
 
 	return (
-		
 		<ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
 			<GlobalStyles />
 			{/* <StyledApp> */}
