@@ -38,6 +38,26 @@
 		h2 {
 			font-size: 30px;
 			color: var(--sColor);
+			margin: 20px 0px;
+		}
+		.itemContainer {
+			display: flex;
+			margin: 10px 30px;
+			.icon {
+				font-size: 20px;
+				margin-right: 5px;
+				color: var(--sColor);
+			}
+			span {
+				font-weight: 500;
+				font-size: 20px;
+				color: var(--sColor);
+
+				a {
+					color: inherit;
+					text-decoration: none;
+				}
+			}
 		}
 		form {
 			width: 60%;
@@ -99,5 +119,6 @@
                 }
               }
 		}
+		
 	}
 }

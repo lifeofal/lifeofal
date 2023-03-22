@@ -21,16 +21,16 @@ export default function Portfolio() {
 		},
 		{
 			id: "web",
-			title: "Web App",
+			title: "Web Apps",
 		},
-		{
-			id: "mobile",
-			title: "Mobile App",
-		},
-		{
-			id: "projects",
-			title: "Projects",
-		},
+		// {
+		// 	id: "mobile",
+		// 	title: "Mobile App",
+		// },
+		// {
+		// 	id: "projects",
+		// 	title: "Projects",
+		// },
 	];
 
 	useEffect(() => {
@@ -69,8 +69,14 @@ export default function Portfolio() {
 			<div className="container">
 				{data.map((d) => (
 					<div className="item">
-						<img src={d.img} alt="Looks like the path is wonky" />
 						<h3>{d.title}</h3>
+						{d.url === undefined ? 
+						<img src={d.img} alt="Looks like the path is wonky" />
+						:
+						<a href={d.url}>
+							<img src={d.img} alt="Looks like the path is wonky" />
+   						</a>
+						}
 					</div>
 				))}
 			</div>
