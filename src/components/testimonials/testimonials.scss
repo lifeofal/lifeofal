@@ -100,7 +100,8 @@
                 padding: 10px;
                 border-radius: 10px;
                 transition: all 1s ease-out;
-                background-image: var(--selectedGrad);
+                @include apply-component(map-get($gradientBG, comp1));
+                // background-image: var(--selectedGrad);
                 color: var(--sColor);
                 @include mobile{
                     // margin: 10px 0;

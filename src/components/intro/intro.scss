@@ -1,5 +1,6 @@
 @import "../../global.scss";
 
+
 .intro {
 	background-color: var(--pColor);
 	display: flex;
@@ -23,7 +24,15 @@
 			width: 700px;
 			height: 700px;
 			transition: all 2s ease-out;
-			background-image: var(--selectedGrad);
+
+			@include apply-component(map-get($gradientBG, comp1));
+
+			// background-image: var(--selectedGrad);
+			// background: linear-gradient(#ff5276, transparent),
+			// 	linear-gradient(to top left, #fe8d79, transparent),
+			// 	linear-gradient(to top right, #833ab4, transparent);
+			// background-blend-mode: screen;
+			// image-rendering: pixelated;
 			border-radius: 50%;
 			display: flex;
 			align-items: flex-end;

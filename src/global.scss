@@ -1,13 +1,13 @@
 $mainColor: blueviolet;
-$lightSecondaryColor: #1c252e;
+$lightSecondaryColor: #282b30;
 $lightPrimaryColor: #ffffff;
 $darkSecondaryColor: #ffffff;
-$darkPrimaryColor: #1c252e;
+$darkPrimaryColor: #282b30;
 $selectedPrimary: #fe8d79;
 $selectedSecondary: #a4dbff;
 
-$selectedLightGrad: linear-gradient( #fe8d79, #ff5276);
-$selectedDarkGrad: linear-gradient( #a4dbff, #36a5f0);
+$selectedLightGrad: linear-gradient(#fe8d79, #ff5276);
+$selectedDarkGrad: linear-gradient(#a4dbff, #36a5f0);
 
 //github calendar
 // $level0light: #0D1117;
@@ -17,9 +17,37 @@ $selectedDarkGrad: linear-gradient( #a4dbff, #36a5f0);
 // $level3: #26A641;
 // $level4: #39D353;
 
-
 @mixin mobile {
-    @media (max-width: 768px) {
-        @content
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+$gradientBG: (
+	comp1: (
+		background: linear-gradient(-45deg, #ee7752, #e73c7e,#833ab4, #5c4d7d),
+		background-size: 400% 400%,
+		animation: gradient 15s ease infinite,
+		
+	),
+
+);
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@mixin apply-component($component) {
+    @each $property, $value in $component {
+      #{$property}: $value;
     }
-};
+  }
+  

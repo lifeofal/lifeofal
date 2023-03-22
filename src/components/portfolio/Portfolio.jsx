@@ -57,7 +57,7 @@ export default function Portfolio() {
 			<h1 id="portfolio-title">Portfolio</h1>
 			<ul>
 				{list.map((item) => (
-					<PortfolioList
+					<PortfolioList className='portList'
 						title={item.title}
 						active={selected === item.id}
 						setSelected={setSelected}
