@@ -7,7 +7,7 @@ export default function Intro() {
 
 	useEffect(() => {
 		console.log("Render");
-    consoleText(["Software Engineer.", "Photographer", "Adventurer"], "text", [
+    consoleText(["Software Engineer.", "Photographer.", "Adventurer."], "text", [
       "white",
     ]);
     

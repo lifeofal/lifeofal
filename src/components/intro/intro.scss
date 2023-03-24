@@ -97,6 +97,13 @@
 				}
 				font-size: 30px;
 			}
+			span {
+				@include mobile {
+					font-size: 25px;
+					font-weight: 200;
+				}
+				font-size: 30px;
+			}
 
 			.hidden {
 				opacity: 0;
@@ -104,7 +111,6 @@
 			.console-container {
 				font-family: Khula;
 				font-size: 30px;
-				color: white;
 				@include mobile {
 					font-size: 25px;
 					font-weight: 200;
