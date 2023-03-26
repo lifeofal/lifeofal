@@ -4,7 +4,8 @@
 
 .portfolioList{
     font-size: 14px;
-    margin-right: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
     padding: 7px;
     border-radius: 10px;
     transition: all 1s ease;
@@ -16,7 +17,8 @@
     }
 
     &.active{
-        background-image: var(--selectedGrad);
+        // background-image: var(--selectedGrad);
+        @include apply-component(map-get($gradientBG, comp1));
         color: var(--sColor);
     }
 }

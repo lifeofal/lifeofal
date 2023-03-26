@@ -51,7 +51,9 @@
 			.item {
 				width: 800px;
 				height: 100%;
-                background-image: var(--selectedGrad);
+                // background-image: var(--selectedGrad);
+                @include apply-component(map-get($gradientBG, comp1));
+
 				
 				border-radius: 20px;
                 display: flex;
