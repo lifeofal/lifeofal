@@ -25,6 +25,7 @@ $selectedDarkGrad: linear-gradient(#a4dbff, #36a5f0);
 
 $gradientBG: (
 	comp1: (
+
 		background: linear-gradient(-90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%),
 		background-size: 400% 400%,
 		animation: gradient 10s ease infinite,
@@ -33,6 +34,7 @@ $gradientBG: (
 	comp2: (
 		
 	)
+
 
 );
 
@@ -49,8 +51,7 @@ $gradientBG: (
 }
 
 @mixin apply-component($component) {
-    @each $property, $value in $component {
-      #{$property}: $value;
-    }
-  }
-  
+	@each $property, $value in $component {
+		#{$property}: $value;
+	}
+}
