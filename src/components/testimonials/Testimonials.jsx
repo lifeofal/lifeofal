@@ -7,6 +7,7 @@ export default function Testimonials({ testimObj }) {
 	const [isOpen, setIsOpen] = useState(false);
 	// const [cardNumber, setCardNumber] = useState(0)
 	let counter = 0;
+	console.log(testimObj)
 
 	return (
 		<div className="testimonials" id="testimonials">
