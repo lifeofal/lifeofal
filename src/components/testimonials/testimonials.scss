@@ -1,143 +1,153 @@
 @import "../../global.scss";
 
-.testimonials{
-    background-color: var(--pColor);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.testimonials {
+	background-color: var(--pColor);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+    
 
-    h1{
-        color: var(--sColor);
-        font-size: 50px;
-        @include mobile{
-           font-size: 35px;
-           margin-top: 30px;
-        }
-    }
-    .container{
-        width: 100%;
-        height: 90%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include mobile{
-            flex-direction: column;
-            margin: 10px;
-            
-            
-        }
+	h1 {
+		color: var(--sColor);
+		font-size: 50px;
+		@include mobile {
+			font-size: 35px;
+			margin-top: 30px;
+		}
+        overflow: hidden;
+	}
+	.container {
+		width: 100%;
+		height: 90%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include mobile {
+			flex-direction: column;
+			margin: 10px;
+		}
 
-        .card{
-            width: 250px;
-            height: 70%;
-            border-radius: 10px;
-            background-color: var(--pColor);
-            box-shadow: 0px 0px 15px -8px var(--sColor);
-            transition: all 1s ease-out;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            padding: 20px;
-            @include mobile{
-                height: 220px;
-                box-shadow: none;
-                border: 1px solid var(--sColor);
-                margin: 20px 0;
+		.card {
+			width: 250px;
+			height: 70%;
+			border-radius: 10px;
+			background-color: var(--pColor);
+			box-shadow: 0px 0px 15px -8px var(--sColor);
+			transition: all 1s ease-out;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			padding: 20px;
+			@include mobile {
+				height: 220px;
+				box-shadow: none;
+				border: 1px solid var(--sColor);
+				margin: 20px 0;
+			}
 
-            }
-            
+			&.featured {
+				width: 300px;
+				height: 75%;
+				margin: 0 30px;
+				@include mobile {
+					// width: 250px;
+					// height: 180px;
+					// margin: 10px 0;
+					display: none;
+				}
+			}
+			&:hover {
+				transform: scale(1.1);
+				@include mobile {
+					transform: none;
+				}
+			}
 
-            &.featured{
-                width: 300px;
-                height: 75%;
-                margin: 0 30px;
-                @include mobile{
-                    // width: 250px;
-                    // height: 180px;
-                    // margin: 10px 0;
-                    display: none;
-                    
+			.top {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include mobile {
+					overflow: hidden;
+					margin-bottom: 10px;
+				}
+				.left,
+				.right {
+					//height: 25px;
+					transition: all 2s ease-out;
+					color: var(--sColor);
+					font-size: 40px;
+				}
+				img {
+					&.user {
+						height: 60px;
+						width: 60px;
+						border-radius: 50%;
+						object-fit: cover;
+						margin: 0 30px;
+						@include mobile {
+							height: 45px;
+							width: 45px;
+						}
+					}
+				}
+			}
+			.center {
+				width: 90%;
+				height: 50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				padding: 10px;
+				border-radius: 10px;
+				transition: all 1s ease-out;
+				@include apply-component(map-get($gradientBG, comp1));
+				// background-image: var(--selectedGrad);
+				color: var(--sColor);
+				@include mobile {
+					// margin: 10px 0;
+					overflow: hidden;
+				}
+                p{
+                    word-wrap: break-word;
                 }
-            }
-            &:hover{
-                transform: scale(1.1);
-                @include mobile{
-                    transform: none;
-                }
+			}
+			.bottom {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				transition: all 1s ease-out;
+				@include mobile {
+					margin-top: 10px;
+					height: 80px;
+					overflow: hidden;
+				}
+				h3 {
+					color: var(--sColor);
 
-            }
+					transition: inherit;
+					@include mobile {
+						overflow: hidden;
+					}
+				}
+				h4 {
+					color: var(--sColor);
+					transition: inherit;
+					@include mobile {
+						overflow: hidden;
+					}
+				}
 
-            .top{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                @include mobile{
-                    overflow: hidden;
-                    margin-bottom: 10px;
-                }
-                .left, .right{
-                    //height: 25px;
-                    transition: all 2s ease-out;
-                    color: var(--sColor);
-                    font-size: 40px;
-                }
-                img{
-                    &.user{
-                        height: 60px;
-                        width: 60px;
-                        border-radius: 50%;
-                        object-fit: cover;
-                        margin: 0 30px;
-                        @include mobile{
-                            height: 45px;
-                            width: 45px;
-                        }
-                    }
-                }
-
-            }
-            .center{
-                padding: 10px;
-                border-radius: 10px;
-                transition: all 1s ease-out;
-                @include apply-component(map-get($gradientBG, comp1));
-                // background-image: var(--selectedGrad);
-                color: var(--sColor);
-                @include mobile{
-                    // margin: 10px 0;
-                    overflow: hidden;
-                }
-            }
-            .bottom{
-                
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                transition: all 1s ease-out;
-                @include mobile{
-                    margin-top: 10px;
-                    height: 80px;
-                    overflow: hidden;
-                }
-                h3{
-                    color: var(--sColor);
-                    
-                    transition: inherit;
-                    @include mobile{
-                        overflow: hidden;
-                    }
-                }
-                h4{
-                    color: var(--sColor);
-                    transition: inherit;
-                    @include mobile{
-                        overflow: hidden;
-                    }
-                }
-            }
-
-
-        }
-    }
+				a {
+					text-decoration: none;
+					color: var(--sColor);
+					transition: inherit;
+					@include mobile {
+						overflow: hidden;
+					}
+				}
+			}
+		}
+	}
 }

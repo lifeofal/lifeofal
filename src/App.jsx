@@ -10,27 +10,43 @@ import {
 } from "./components/componentIndex";
 
 import "./App.scss";
+
 import { useEffect, useState } from "react";
+
 import Menu from "./components/menu/Menu";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./components/themes/Theme";
 
-// import "./components/intro/intro.js";
+import api from "./rest/axiosConfig.js";
+
 
 function App() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	//const [displayMode, setDisplayMode] = useState(true); //true light false dark
 
+	const [testimObj, setTestimonials] = useState();
+
 	const [theme, setTheme] = useState("dark");
+
+	const getTestimonials = async () => {
+		try {
+			const response = await api.get("/testimonial/approved/threeRandom");
+			console.log(response.data);
+			setTestimonials(response.data);
+		} catch (err) {
+			console.log(err);
+		}
+	};
+
+	useEffect(() => {
+		getTestimonials();
+	}, []);
 
 	const themeToggler = () => {
 		console.log(theme);
 		theme === "light" ? setTheme("dark") : setTheme("light");
 	};
 
-	// useEffect(() => {
-	// 	console.log("render in app");
-	// });
 
 	return (
 		<ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
@@ -49,7 +65,10 @@ function App() {
 					<Intro />
 					<Portfolio />
 					<Work />
-					<Testimonials />
+					{/* <Testimonials /> */}
+
+					<Testimonials testimObj={testimObj} />
+
 					<Contact />
 				</div>
 			</div>
