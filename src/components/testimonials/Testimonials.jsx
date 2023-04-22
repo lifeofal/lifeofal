@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import "./testimonials.scss";
 import { data } from "../../data/testimonial-data.js";
 import Modal from "../modal/Modal.jsx";
+import { LinkedIn } from "@mui/icons-material";
 
 export default function Testimonials({ testimObj }) {
 	const [isOpen, setIsOpen] = useState(false);
 	// const [cardNumber, setCardNumber] = useState(0)
 	let counter = 0;
-	console.log(testimObj)
+	console.log(testimObj);
 
 	return (
 		<div className="testimonials" id="testimonials">
@@ -17,7 +18,9 @@ export default function Testimonials({ testimObj }) {
 			<div className="container">
 				{testimObj?.map((obj) => {
 					// const randomId = Math.floor(Math.random() * 3) + 1;
-					counter++;
+					if (testimObj.length === 3) {
+						counter++;
+					}
 					return (
 						<div
 							className={counter === 2 ? "card featured" : "card"}
@@ -34,9 +37,16 @@ export default function Testimonials({ testimObj }) {
 							<div className="bottom">
 								<h3>{obj.user.name}</h3>
 								<h4>{obj.user.title}</h4>
-								<a href={obj.user.link}>
+								<div className="itemContainer">
+									<span>
+										<a href={obj.user.link}>
+											<LinkedIn className="icon" />
+										</a>
+									</span>
+								</div>
+								{/* <a href={obj.user.link}>
 									<h5>{obj.user.link}</h5>
-								</a>
+								</a> */}
 							</div>
 						</div>
 					);

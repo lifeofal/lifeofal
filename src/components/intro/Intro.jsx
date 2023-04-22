@@ -1,20 +1,23 @@
 import React, { useEffect } from "react";
 import "./intro.scss";
-import {consoleText} from "./intro.js";
+import { consoleText } from "./intro.js";
 import { ArrowCircleDown } from "@mui/icons-material";
 
 export default function Intro() {
-
 	useEffect(() => {
 		console.log("Render");
-    consoleText(["Software Engineer.", "Photographer.", "Adventurer."], "text", [
-      "white",
-    ]);
-    
+		consoleText(
+			["Software Engineer.", "Photographer.", "Adventurer."],
+			"text",
+			["white"]
+		);
 	}, []);
 
 	return (
 		<div className="intro" id="intro">
+			<video autoPlay muted loop id="myVideo">
+				<source src="assets/intro/Website_BG.mp4" type="video/mp4" />
+			</video>
 			<div className="left">
 				<div className="imgContainer">
 					<img src="assets/profile-modified.png" alt="My face" />
@@ -31,7 +34,6 @@ export default function Intro() {
 							&#95;
 						</div>
 					</div>
-
 				</div>
 				<a href="#portfolio">
 					<ArrowCircleDown className="ArrowCircleDown" />

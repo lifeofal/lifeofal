@@ -8,13 +8,15 @@
         
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: var(--pColor);
+        // background-color: var(--pColor);
         transition: all 1s ease ;
         position: relative;
         top: 70px;
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
+        scroll-snap-stop: always;
         scrollbar-width: none; //for fire fox
+        
         &::-webkit-scrollbar{
             display: none;
         }
