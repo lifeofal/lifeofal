@@ -4,6 +4,7 @@ import "./portfolio.scss";
 import GitHubCalendar from "react-github-calendar";
 import GitInfo from 'react-git-info/macro';
 import { format } from 'date-fns';
+import GithubLastCommitMessage from "../../data/github-data";
 
 
 import {
@@ -18,9 +19,10 @@ export default function Portfolio() {
 	const [data, setData] = useState([]);
 	const gitInfo = GitInfo();
 
+	const commitMsg = GithubLastCommitMessage ({username:"lifeofal" ,repo:"lifeofal"} );
 	// Date fns
-	const date = new Date(gitInfo.commit.date)
-	const formattedDate = format(date, "MM-dd-yyyy")
+	// const date = new Date(commitMsg.get('lastCommitDate'))
+	// const formattedDate = format(date, "MM-dd-yyyy")
 
 	const list = [
 		{
@@ -104,11 +106,12 @@ export default function Portfolio() {
 					
 				/>
 				<h3 className="commitMsg">
-					Lastest commit to this website: {gitInfo.commit.message}
+					Lastest commit to this website: {commitMsg.get('lastCommitMessage')}
 				</h3>
 				<h3 className="commitMsg">
-					Last updated on: {formattedDate}
+					Last updated on: {commitMsg.get('lastCommitDate')}
 				</h3>
+				
 				
 			</div>
 		</div>
