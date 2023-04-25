@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 import GitHubCalendar from "react-github-calendar";
-import GitInfo from 'react-git-info/macro';
-import { format } from 'date-fns';
 import GithubLastCommitMessage from "../../data/github-data";
 
 
@@ -17,12 +15,8 @@ import {
 export default function Portfolio() {
 	const [selected, setSelected] = useState("featured");
 	const [data, setData] = useState([]);
-	const gitInfo = GitInfo();
 
 	const commitMsg = GithubLastCommitMessage ({username:"lifeofal" ,repo:"lifeofal"} );
-	// Date fns
-	// const date = new Date(commitMsg.get('lastCommitDate'))
-	// const formattedDate = format(date, "MM-dd-yyyy")
 
 	const list = [
 		{
