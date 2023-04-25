@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 import GitHubCalendar from "react-github-calendar";
+import GitInfo from 'react-git-info/macro';
+import { format } from 'date-fns';
+
 
 import {
 	featuredPort,
@@ -13,6 +16,11 @@ import {
 export default function Portfolio() {
 	const [selected, setSelected] = useState("featured");
 	const [data, setData] = useState([]);
+	const gitInfo = GitInfo();
+
+	// Date fns
+	const date = new Date(gitInfo.commit.date)
+	const formattedDate = format(date, "MM-dd-yyyy")
 
 	const list = [
 		{
@@ -95,6 +103,13 @@ export default function Portfolio() {
 					hideMonthLabels={true}
 					
 				/>
+				<h3 className="commitMsg">
+					Lastest commit to this website: {gitInfo.commit.message}
+				</h3>
+				<h3 className="commitMsg">
+					Last updated on: {formattedDate}
+				</h3>
+				
 			</div>
 		</div>
 	);
