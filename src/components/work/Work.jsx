@@ -24,7 +24,7 @@ export default function Work() {
 				{data.map((d) => (
 					<div className="container">
 						<div className="item">
-							<div className="left">
+							<div className="left" id={d.flex == true ? "flex" : "nonFlex"}>
 								<div className="leftContainer">
 									<div className="imgContainer">{d.icon}</div>
 									<h2>{d.title}</h2>

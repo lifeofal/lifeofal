@@ -21,6 +21,7 @@ export default function Intro() {
 			<div className="left">
 				<div className="imgContainer">
 					<img src="assets/profile-modified.png" alt="My face" />
+					<div id="bg"></div>
 				</div>
 			</div>
 			<div className="right">

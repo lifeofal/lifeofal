@@ -9,6 +9,9 @@ $selectedSecondary: #a4dbff;
 $selectedLightGrad: linear-gradient(#fe8d79, #ff5276);
 $selectedDarkGrad: linear-gradient(#a4dbff, #36a5f0);
 
+$darkPrimaryTransparent: #282b3063;
+$lightPrimaryTransparent: #ffffff46;
+
 //github calendar
 // $level0light: #0D1117;
 // $level0dark: #182028;
@@ -26,7 +29,7 @@ $selectedDarkGrad: linear-gradient(#a4dbff, #36a5f0);
 $gradientBG: (
 	comp1: (
 
-		background: linear-gradient(-90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%),
+		background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab),
 		background-size: 400% 400%,
 		animation: gradient 10s ease infinite,
 		

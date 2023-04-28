@@ -1,12 +1,16 @@
 @import "../../global.scss";
 
 .work {
-	background-color: var(--pColor);
+	// background-color: var(--pColor);
+    @include apply-component(map-get($gradientBG, comp1));
+    // background-image: url("../../../public/assets/slider/bgcollage.JPG");
 	display: flex;
 	align-items: center;
 	justify-content: center;
     position: relative;
     overflow: hidden;
+    
+    
 
 
 
@@ -52,9 +56,12 @@
 				width: 800px;
 				height: 100%;
                 // background-image: var(--selectedGrad);
-                @include apply-component(map-get($gradientBG, comp1));
-
-				
+                @include mobile{
+                    @include apply-component(map-get($gradientBG, comp1));
+                }
+                background-color: var(--pColorT);
+                backdrop-filter: blur(20px);
+				-webkit-backdrop-filter: blur(20px);
 				border-radius: 20px;
                 display: flex;
 				align-items: center;
@@ -67,9 +74,9 @@
                     
                 }
 
-				.left {
+				.left#flex {
 					flex: 4;
-					height: 80%;
+					height: 95%;
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -107,6 +114,59 @@
                             @include mobile{
                                 overflow: hidden;
                                 
+                            }
+
+                        }
+                        span{
+                            font-size: 18px;
+                            font-weight: 600;
+                            text-decoration: underline;
+                        }
+                    }
+				}
+                .left#nonFlex {
+					// flex: 4;
+					height: 95%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+                    
+
+                    .leftContainer{
+                        width: 90%;
+                        height: 85%;
+                        >* {
+                            padding: 10px 0px;
+                        }
+                        display: inline-block;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .imgContainer{
+                            width: 50px;
+                            // height: 50px;
+                            border-radius: 50%;
+                            background-color: white;
+                            display: flex;
+                            align-content: center;
+                            justify-content: center;
+                            align-items: center;
+                            .icon{
+                                color: black;
+                                font-size: 30px;
+                            }
+                            @include mobile{
+                                display: none;
+                            }
+                            
+                        }
+                        h2{
+                            font-size: 25px;
+                        }
+                        p{
+                            font-size: 18px;
+                            @include mobile{
+                                overflow: hidden;
+                                font-size: 15px;
                             }
 
                         }

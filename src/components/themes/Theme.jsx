@@ -4,6 +4,7 @@ import variables from "./themes.scss";
 export const lightTheme = {
 	pColor: variables.lightPrimary,
 	sColor: variables.lightSecondary,
+	pColorT: variables.lightPrimaryTransparent,
 
 	tbPColor_active: variables.lightModeTB_active_primary,
 	tbSColor_active: variables.lightModeTB_active_secondary,
@@ -25,6 +26,7 @@ export const lightTheme = {
 export const darkTheme = {
 	pColor: variables.darkPrimary,
 	sColor: variables.darkSecondary,
+	pColorT: variables.darkPrimaryTransparent,
 
 	tbPColor_active: variables.darkModeTB_active_primary,
 	tbSColor_active: variables.darkModeTB_active_secondary,
@@ -47,6 +49,7 @@ export const GlobalStyles = createGlobalStyle`
 	:root {
         --pColor: ${(props) => props.theme.pColor};
         --sColor: ${(props) => props.theme.sColor};
+		--pColorT: ${(props) => props.theme.pColorT};
         --tbPColor_active: ${(props) => props.theme.tbPColor_active};
         --tbSColor_active: ${(props) => props.theme.tbSColor_active};
         --tbPColor_inactive: ${(props) => props.theme.tbPColor_inactive};

@@ -20,7 +20,6 @@
 			display: none;
 		}
 	}
-	
 
 	.left {
 		z-index: 1;
@@ -34,36 +33,43 @@
 		}
 		.imgContainer {
 			//margin-top: 10px;
-			width: 700px;
-			height: 700px;
+			// width: 700px;
+			// height: 700px;
 			transition: all 2s ease-out;
-
-			@include apply-component(map-get($gradientBG, comp1));
-
-			// background-image: var(--selectedGrad);
-			// background: linear-gradient(#ff5276, transparent),
-			// 	linear-gradient(to top left, #fe8d79, transparent),
-			// 	linear-gradient(to top right, #833ab4, transparent);
-			// background-blend-mode: screen;
-			// image-rendering: pixelated;
-			border-radius: 50%;
 			display: flex;
 			align-items: flex-end;
 			justify-content: center;
 			float: right;
 			// margin-top: 50px;
 
-			@include mobile {
-				align-items: flex-start;
-				width: 600px;
-				height: 600px;
+			#bg {
+				position: absolute;
+				transition: all 2s ease-out;
+				width: 28%;
+				background-color: var(--pColorT);
+				backdrop-filter: blur(20px);
+				-webkit-backdrop-filter: blur(20px);
+				border-radius: 50%;
+				z-index: 0;
+				@include mobile {
+					// z-index: 0;
+					@include apply-component(map-get($gradientBG, comp1));
+
+					align-items: flex-start;
+					width: 78%;
+				}
+			}
+			#bg:after {
+				content: "";
+				display: block;
+				padding-bottom: 100%;
 			}
 
 			img {
-				width: 100%;
-
+				width: 75%;
+				z-index: 1;
 				@include mobile {
-					padding-left: 40px;
+					// padding-left: 40px;
 					width: 80%;
 				}
 			}
